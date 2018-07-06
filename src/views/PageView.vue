@@ -1,34 +1,31 @@
 <template>
-  <div class="login">
+  <div class="page">
+    <list></list>
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
+import List from '../components/List'
+
 export default {
-  name: 'LoginView',
+  name: 'page',
+  components:{List},
   data () {
     return {
-      msg: 'LoginView'
+      msg: ''
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
+
+<style lang="scss" scoped>
+h1 {
   font-weight: normal;
+  font-size: 1.8rem;
+  color: rgb(13, 13, 14);
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+</style>
 </style>
